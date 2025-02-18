@@ -1,0 +1,244 @@
+body{
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    box-shadow: rgb(0, 0, 0) 0px 13px 27px -5px, rgb(255, 255, 255) 0px 8px 16px -118px ;
+}
+
+.red{
+    background-color: #8C0404;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------------------------- */
+main{ /* Conteneur principal */
+    height: 50%;
+    width: auto;
+    display: grid;
+    gap: 10px;
+    background-color: #B3B1B2;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+#conteneur1{ /* la première ligne */
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.15fr 0.15fr;
+    column-gap: 5px;
+}
+
+#conteneur1>div{ /* les 4 div de la première ligne */
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+/* Fin de la première ligne -------------------------------------------------------------------------------- */
+
+#conteneur2{ /* la deuxième ligne */
+    display: grid;
+    grid-template-columns: 7.5fr 1fr;
+    column-gap: 5px
+}
+
+.mini-conteneur{ /* le conteneur qui contient tous les items saufe un de la deuxième ligne */
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    column-gap: 5px;
+}
+
+
+#conteneur2> .mini-conteneur> div{  /* les 13 div de la deuxième ligne contenue dans le div dont la classe est .mini-conteneur */
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur2> .item_b14{ /* le dernier item de la deuxième ligne */
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+/* Fin de la deuième ligne -------------------------------------------------------------------------------- */
+
+/* Ici j'ai appliqué le mm principe que dans le conteneur2 mais j'ai inversé les position  ----------------------------------------------------- */
+#conteneur3{ /* la troisième ligne */
+    display: grid;
+    grid-template-columns: 1fr 8.5fr;
+    column-gap: 5px;
+}
+
+.mini-conteneur2{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    column-gap: 5px;
+}
+
+.mini-conteneur2 *{
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur3> .item_c14{
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+/* Fin de la troisième ligne -------------------------------------------------------------------------------- */
+
+#conteneur4{ /* la quatrième ligne */
+   display: grid;
+   grid-template-columns: 1fr 5.4fr 1fr ; 
+    column-gap: 5px;
+}
+
+#conteneur4>.mini1 { /* J'ai sélectionné ici la div dans laquelle j'ai placé item_d1 */
+    display: grid;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur4> .mini-conteneur4{ /* J'ai sélectionné ici la div dans laquelle j'ai placé les 11 items de la quatrième ligne */
+   display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    column-gap: 5px;
+    
+}
+
+#conteneur4> .mini-conteneur4> div{ /* J'ai sélectionné ici les 11 items de la quatrième ligne */
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur4 .mini2{ /* J'ai sélectionné ici la div dans laquelle j'ai placé item_d13 */
+    display: grid;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+/* Fin de la quatrième ligne -------------------------------------------------------------------------------- */
+
+/* Ici je vais appliqué le mm principe qu'avec les éléments de conteneur4 en adaptant les classe et les valeurs  */
+
+#conteneur5{ /* la cinquième ligne */
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 1fr ; 
+    column-gap: 5px;
+}
+
+#conteneur5>.mini3 { 
+    display: grid;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur5> .mini-conteneur5{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 5px;
+}
+
+#conteneur5> .mini-conteneur5 > div{
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur5 .mini4{
+    display: grid;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+/* Fin de la cinquième ligne -------------------------------------------------------------------------------- */
+
+#conteneur6{ /* la sixième ligne */
+    display: grid;
+    grid-template-columns: 37% 30% 17% 1fr ; 
+    column-gap: 5px;
+    height: 15px;
+}
+
+#conteneur6>.mini5{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5px;
+    border-radius: 10px;
+}
+
+#conteneur6>.mini5>div{
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur6>.mini6{
+    display: grid;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#conteneur6>.mini7{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    border-radius: 10px;
+}
+
+#conteneur6>.mini7>div{
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+#mini8{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: transparent;
+    align-items: center;
+    height: 49px;
+}
+
+.fleche1{
+    border: solid black;
+    width: 25%;
+    grid-column: 2;
+    justify-self: center;
+    text-align: center;
+}
+
+.fleche2{
+    border: solid black;
+    width: 25%;
+    grid-column: 1;
+    justify-self: center;
+    text-align: center;
+}
+
+.fleche3{
+    border: solid black;
+    width: 25%;
+    justify-self: center;
+    text-align: center;
+}
+
+.fleche4{
+    border: solid black;
+    width: 25%;
+    justify-self: center;
+    text-align: center;
+}
+
+.fleche{
+    width: 40px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
