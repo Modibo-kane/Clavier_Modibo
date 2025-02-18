@@ -14,6 +14,7 @@ body{
     justify-content: center;
     background-color: #000;
     box-shadow: rgb(0, 0, 0) 0px 13px 27px -5px, rgb(255, 255, 255) 0px 8px 16px -118px ;
+    border-radius: 10px;
 }
 
 .red{
@@ -24,7 +25,7 @@ body{
 /* ---------------------------------------------------------------------------- */
 main{ /* Conteneur principal */
     height: 50%;
-    width: auto;
+    width: 100%;
     display: grid;
     gap: 10px;
     background-color: #B3B1B2;
@@ -41,7 +42,7 @@ main{ /* Conteneur principal */
 
 #conteneur1>div{ /* les 4 div de la première ligne */
     border: solid 1px black;
-    border-radius: 10px;
+    
 }
 
 /* Fin de la première ligne -------------------------------------------------------------------------------- */
@@ -61,12 +62,10 @@ main{ /* Conteneur principal */
 
 #conteneur2> .mini-conteneur> div{  /* les 13 div de la deuxième ligne contenue dans le div dont la classe est .mini-conteneur */
     border: solid 1px black;
-    border-radius: 10px;
 }
 
 #conteneur2> .item_b14{ /* le dernier item de la deuxième ligne */
     border: solid 1px black;
-    border-radius: 10px;
 }
 
 /* Fin de la deuième ligne -------------------------------------------------------------------------------- */
@@ -86,12 +85,11 @@ main{ /* Conteneur principal */
 
 .mini-conteneur2 *{
     border: solid 1px black;
-    border-radius: 10px;
 }
 
 #conteneur3> .item_c14{
     border: solid 1px black;
-    border-radius: 10px;
+   
 }
 
 /* Fin de la troisième ligne -------------------------------------------------------------------------------- */
@@ -104,8 +102,7 @@ main{ /* Conteneur principal */
 
 #conteneur4>.mini1 { /* J'ai sélectionné ici la div dans laquelle j'ai placé item_d1 */
     display: grid;
-    border: solid 1px black;
-    border-radius: 10px;
+
 }
 
 #conteneur4> .mini-conteneur4{ /* J'ai sélectionné ici la div dans laquelle j'ai placé les 11 items de la quatrième ligne */
@@ -115,15 +112,8 @@ main{ /* Conteneur principal */
     
 }
 
-#conteneur4> .mini-conteneur4> div{ /* J'ai sélectionné ici les 11 items de la quatrième ligne */
-    border: solid 1px black;
-    border-radius: 10px;
-}
-
 #conteneur4 .mini2{ /* J'ai sélectionné ici la div dans laquelle j'ai placé item_d13 */
     display: grid;
-    border: solid 1px black;
-    border-radius: 10px;
 }
 
 /* Fin de la quatrième ligne -------------------------------------------------------------------------------- */
@@ -138,8 +128,7 @@ main{ /* Conteneur principal */
 
 #conteneur5>.mini3 { 
     display: grid;
-    border: solid 1px black;
-    border-radius: 10px;
+    
 }
 
 #conteneur5> .mini-conteneur5{
@@ -148,15 +137,8 @@ main{ /* Conteneur principal */
     column-gap: 5px;
 }
 
-#conteneur5> .mini-conteneur5 > div{
-    border: solid 1px black;
-    border-radius: 10px;
-}
-
 #conteneur5 .mini4{
-    display: grid;
-    border: solid 1px black;
-    border-radius: 10px;
+    display: grid;    
 }
 
 /* Fin de la cinquième ligne -------------------------------------------------------------------------------- */
@@ -172,30 +154,28 @@ main{ /* Conteneur principal */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 5px;
-    border-radius: 10px;
+    
 }
 
 #conteneur6>.mini5>div{
     border: solid 1px black;
-    border-radius: 10px;
+    
 }
 
 #conteneur6>.mini6{
     display: grid;
-    border: solid 1px black;
-    border-radius: 10px;
+    
 }
 
 #conteneur6>.mini7{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5px;
-    border-radius: 10px;
 }
 
 #conteneur6>.mini7>div{
     border: solid 1px black;
-    border-radius: 10px;
+
 }
 
 #mini8{
@@ -241,4 +221,172 @@ main{ /* Conteneur principal */
     border-radius: 5px;
     background-color: #000;
     color: #fff;
+}
+
+
+/* ici je vais faire le @media pour que le clavier soit responsive */
+
+@media screen {
+    @media (max-width: 600px) {
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+        
+        .item, .red{ /* les 4 div de la première ligne */
+            border: solid 1px black;
+            border-radius: 3px;
+            text-transform: lowercase;
+            padding: 1px;
+        }
+        
+        main{
+            width: 220px;
+            height: auto;
+            font-size: 10px;
+            border: greenyellow solid;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: #B3B1B2;
+            padding: 25px;
+            align-items: center;
+        }
+        
+        #conteneur1{ /* la première ligne */
+            display: grid;
+            grid-template-columns: 30px 130px 30px 30px;
+            column-gap: 5px;
+            
+        }
+
+        #conteneur2{ /* la deuxième ligne */
+            display: grid;
+            grid-template-columns: 180px 35px;
+            column-gap: 15px;
+            height: 40%;
+            
+        }
+
+        .mini-conteneur{ /* le conteneur qui contient tous les items saufe un de la deuxième ligne */
+            display: grid;
+            grid-template-columns: repeat(13, 10px);
+            column-gap: 5px;
+        }
+
+        #conteneur3{ /* la troisième ligne */
+            display: grid;
+            grid-template-columns: 35px 180px;
+            column-gap: 5px;
+            width: 230px;
+            
+        }
+
+        .mini-conteneur2{
+            display: grid;
+            
+            grid-template-columns: repeat(13, 10px);
+            column-gap: 5px;
+            text-transform: lowercase;
+        }
+
+        #conteneur4{ /* la quatrième ligne */
+            display: grid;
+            grid-template-columns: 40px 150px 30px ; 
+             column-gap: 8px;
+             
+         }
+         
+         #conteneur4>.mini1 { /* J'ai sélectionné ici la div dans laquelle j'ai placé item_d1 */
+             display: grid;
+         
+         }
+
+         #conteneur5{ /* la cinquième ligne */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 230px;
+                
+            }
+
+            #conteneur5> .mini-conteneur5{
+                display: grid;
+                grid-template-columns: repeat(10, 10px);
+                column-gap: 6px;
+            }
+
+            .mini3{
+                width: 40px;
+            }
+
+            .mini4{
+                width: 40px;
+            }
+
+            #conteneur6{ /* la sixième ligne */
+                display: grid;
+                width: 230px;
+                flex-direction: row;
+                grid-template-columns:  80px 50px 40px 50px;
+                column-gap: 5px;
+                height: 15px;
+            }
+
+            .item_f1, .item_f2, .item_f3,.item_f4,.item_f5,.item_f6,.item_f7{
+                height: 15px;
+            }
+
+            #mini8{
+                height: 15px;
+                font-size: 3px;
+                display: grid;
+                grid-template-columns: repeat(3, 15px);
+                background-color: transparent;
+                align-items: center;
+                
+            }
+
+            .fleche{
+                width: 15px;
+                border-radius: 2px;
+                background-color: #000;
+                color: #fff;
+            }
+            
+            .fleche1{
+                border: solid black;
+                width: 25%;
+                grid-column: 2;
+                justify-self: center;
+                text-align: center;
+            }
+            
+            .fleche2{
+                border: solid black;
+                width: 25%;
+                grid-column: 1;
+                justify-self: center;
+                text-align: center;
+            }
+            
+            .fleche3{
+                border: solid black;
+                width: 25%;
+                justify-self: center;
+                text-align: center;
+            }
+            
+            .fleche4{
+                border: solid black;
+                width: 25%;
+                justify-self: center;
+                text-align: center;
+            }
+            
+           
+    }
 }
