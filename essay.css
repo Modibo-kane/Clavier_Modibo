@@ -486,3 +486,11 @@ main{ /* Conteneur principal */
         grid-template-rows: repeat(6, 1fr);
       }
   }
+
+  @media screen and (min-width:1280px) and (max-height:0px) {
+    main {
+        height: 40vh;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+      }
+  }
