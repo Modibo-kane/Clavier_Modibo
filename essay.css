@@ -331,7 +331,7 @@ main{ /* Conteneur principal */
                 width: 230px;
                 flex-direction: row;
                 grid-template-columns:  80px 50px 40px 50px;
-                column-gap: 5px;
+                column-gap: 6px;
                 height: 15px;
             }
 
